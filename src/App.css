@@ -1,38 +1,192 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+    font-size: 62.5%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+    background: rgb(3, 0, 31);
+    font-family: 'Poppins', sans-serif;
+    color: white;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.App{
+    min-height: 100vh;
+    display: flex;
 }
 
-.App-link {
-  color: #61dafb;
+.sideBar{
+    flex: 2.5;
+    border: 1px solid grey;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.mainBar{
+    flex: 9;
+}
+
+.logo{
+    margin-right: 2.2rem;
+    margin-left: 1.9rem;
+    width: 50px;
+}
+
+.brand{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.upperSide{
+    padding: 2.5rem;
+    border-bottom: 1px solid grey;
+    height: 70%;
+}
+
+.upperSideTop{
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+.midBtn{
+    background-color: #584bff;
+    border: none;
+    color: white;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    width: 25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    border-radius: 0.5rem;
+}
+
+.addBtn{
+    height: 2rem;
+    padding-right:1rem ;
+}
+
+.query{
+    display: flex;
+    align-items: center;
+    background: transparent;
+    color: rgb(222,222,222,1);
+    padding: 1.5rem;
+    width:25rem ;
+    margin: 1rem auto;
+    border-radius: 0.5rem;
+    border: 1px solid grey;
+}
+
+.query img{
+    height: 1.5rem;
+    margin-right: 2rem;
+    object-fit: cover;
+}
+
+.lowerSide{
+    padding: 2.5rem;
+}
+
+.listItems{
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+}
+
+.listItemnsImg{
+    margin: 1rem;
+    padding-right: 1rem;
+}
+
+/*The first listitem name is not properly arranges */
+.listItems:nth-child(1) .listItemnsImg{
+    margin-right: 0.5rem;
+}
+
+.mainBar{
+    min-height: calc(100vh - 14rem);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 6rem 10rem;
+}
+
+.chats{
+    overflow: hidden;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    width: 100%;
+    max-width: 85rem;
+    height: calc(100vh - 17rem);
+    flex-grow: 1;
+}
+
+.chats::-webkit-scrollbar {
+  display: none;
+}
+
+.chat{
+    margin: 1rem;
+    padding: 2rem 3rem;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: flex-start;
+    text-align: justify;
+
+}
+
+.bot{
+    background: rgb(28, 30, 58, 1);
+    width: fit-content;
+    border-radius: 0.5rem;
+}
+
+.userIcon, .gptImg{
+    object-fit: cover;
+    width: 5rem;
+    margin-right: 2rem;
+    border-radius: 5px;
+}
+
+.chatFooter{
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.inp{
+    padding: 0.5rem;
+    background: rgb(28, 30,58,1);
+    display: flex;
+    align-items: center;
+    border-radius: 0.5rem;
+    justify-content: space-between;
+    width: 68rem;
+}
+
+.inp input{
+    width: calc(100% - 3rem);
+    outline: none;
+    padding: 1.25rem;
+    color: white;
+}
+
+.inp input, .send{
+    background: transparent;
+    border: none;
+}
+
+.txt{
+    line-height: 2.5rem;
+    color: rgb(229, 224, 216);
 }
