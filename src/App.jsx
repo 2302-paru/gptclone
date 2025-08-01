@@ -37,6 +37,7 @@ const App = () => {
   const handleEnter = async (e) => {
     if(e.key === 'Enter'){
       await handleSend();
+      console.log(process.env.REACT_APP_OPENAI_API_KEY);
     }
   }
 
